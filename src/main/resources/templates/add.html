@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html xmlns:th="http://www.thymeleaf.org">  
+
+    <head th:replace="layout/template :: head"> 
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    
+    <body>  
+        <header th:replace="layout/template :: header"></header>
+        <div class="container mt-4">  
+            <a href="/listar">Listar</a>
+            <div class="card-header bg-info text-white">                
+                </div>
+            <form action="salvar" method="post">
+                 <!--
+                <label>ID</label>
+                <input type="text" name="nome" id="nome" class="form-control" th:value="${cad.nome}"/>
+                -->
+                <label>NOME</label>
+                 <input type="text" name="nome" id="nome" class="form-control">
+                <label>Endereço</label>
+                <input type="text" name="ender" id="ender" class="form-control">
+                <label>Telefone</label>
+                <input type="number" name="fone" id="fone" class="form-control">
+                <label>Email</label>
+                <input type="email" name="email"id="email" class="form-control"></br>
+                
+                <input type="submit" value="Salvar">                                     
+            </form>
+        </div> 
+    </body>
+     <footer th:replace="layout/template :: footer"></footer>
+</html>
