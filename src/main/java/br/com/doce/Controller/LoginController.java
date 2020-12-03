@@ -1,6 +1,8 @@
 package br.com.doce.Controller;
 
 
+
+
 import java.util.List;
 
 import javax.validation.Valid;
@@ -15,8 +17,9 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
 
-import uttt.web.entity.Usuario;
-import uttt.web.service.IUsuarioService;
+import br.com.doce.Model.Usuario;
+import br.com.doce.Service.IUsuarioService;
+
 
 @Controller
 public class LoginController {

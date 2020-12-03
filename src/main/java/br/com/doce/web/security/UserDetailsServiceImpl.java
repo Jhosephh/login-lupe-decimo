@@ -9,8 +9,10 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
-import uttt.web.entity.Usuario;
-import uttt.web.repository.IUsuarioDAO;
+import br.com.doce.Model.Usuario;
+import br.com.doce.Repositories.IUsuarioDAO;
+
+
 
 @Service
 public class UserDetailsServiceImpl implements UserDetailsService {
