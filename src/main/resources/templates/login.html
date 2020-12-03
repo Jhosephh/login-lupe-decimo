@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layout/template3 :: head">
+</head>
+
+<header th:replace="layout/template3 :: header"></header>
+<body>
+	<div class="container mt-05">
+		<div class="row justify-content-center">
+			<div class="col-md-06">
+				<div th:if="${param.error}" class="alert alert-danger mb-03">Credenciales
+					Incorrectas</div>
+				<div class="card">
+					<div class="card-header">
+						<h4>Iniciar Sesion</h4>
+					</div>
+					<div class="card-body">
+
+						<form id="loginform" method="POST" th:action="@{/auth/login-post}"
+							role="form">
+							<div class="col-sm-14">
+								
+									<div class="header">
+										<div class="body">
+
+
+											<div class="row form-group">
+												<label class="col-md-03">Usuario</label> <input type="text"
+													name="username" class="form-control form-control-sm" />
+											</div>
+
+											<div class="row form-group">
+												<label class="col-md-03">Password</label> <input
+													type="password" name="password"
+													class="form-control form-control-sm" />
+											</div>
+
+											<div class="card-footer bg-dark">
+												<input type="submit"
+													class="btn btn-success btn-block col-md-07"
+													value="Continuar" />
+											</div>
+										</div>
+									</div>
+
+							
+
+							</div>
+						</form>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+
+</body>
+<footer th:replace="layout/template3 :: footer"></footer>
+
+</html>
