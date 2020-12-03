@@ -1,29 +1,22 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head th:replace="/layout/template2 :: head">
+<head th:replace="layout/template2 :: head">
 </head>
 
-<header th:replace="/layout/template2 :: header"></header>
+<header th:replace="layout/template2 :: head"></header>
 <body>
 	<nav class="navbar navbar-expand-lg navbar-light bg-light">
 		<div class="navbar navbar-collapse" id="navbarSupportedContent">
-			<div class="conteiner mt-05">
-		<div class="row justify-content-center">
-			<div class="col-md-03">
-					<div class="card-body">
-					
-				
-					
-							<span th:if="${session.usuario != null}">Bienvenid@ <br>
-							<span class="font-italic" th:text="${session.usuario.nombre}"></span></span>
-							
-							<form th:action="@{/logout}" method="POST">
-							<button type="submit" class="btn btn-primary mt-3">Salir</button>
-							</form>
-						</div>
-					</div>
-				</div>
-			</div>
+			<ul class="navbar-nav mr-auto">
+
+				<li class="nav-item ml-5"><a th:href="@{/auth/login}">Loging</a>
+				</li>
+
+				<li class="nav-item ml-5"><a th:href="@{/auth/registro}">Registro</a>
+				</li>
+
+			</ul>
+
 		</div>
 
 	</nav>
